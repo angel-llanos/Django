@@ -69,3 +69,9 @@ def alumnos_findEdit(request,pk):
 
 def alumnosUpdate(request):
     return "hola"
+
+def crud_generos(request):
+    generos = Genero.objects.all()
+    context ={'generos':generos}
+    print("enviando datos generos_list")
+    return render(request, "alumnos/generos_list.html",context)
